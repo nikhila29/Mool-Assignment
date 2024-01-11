@@ -1,0 +1,1 @@
+export { ShieldPlus1 } from "./ShieldPlus1";

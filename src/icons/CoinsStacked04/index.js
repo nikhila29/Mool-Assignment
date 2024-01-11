@@ -1,0 +1,1 @@
+export { CoinsStacked04 } from "./CoinsStacked04";

@@ -1,0 +1,1 @@
+export { InfoCircle1 } from "./InfoCircle1";

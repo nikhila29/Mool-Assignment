@@ -1,0 +1,67 @@
+import PropTypes from "prop-types";
+import React from "react";
+import styled from "styled-components";
+
+const StyledCircle = styled.svg`
+  &.circle {
+    fill: none;
+    height: 20;
+    viewBox: 0 0 20 20;
+    width: 20;
+  }
+
+  & .g {
+    clip-path: url(#clip0_1_3910);
+  }
+
+  & .path {
+    stroke: ${props => props.color || "#344054"};
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 1.67;
+  }
+
+  & .defs {
+    clip-path: url(#clip0_1_3910);
+  }
+
+  & .clip-path {
+    fill: white;
+    height: 20;
+    width: 20;
+  }
+`;
+
+export const Circle = ({ color = "#344054", className }) => {
+  return (
+    <StyledCircle
+      className={`circle ${className}`}
+      color={color}
+      fill="none"
+      height="20"
+      viewBox="0 0 20 20"
+      width="20"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g className="g" clipPath="url(#clip0_1_3910)">
+        <path
+          className="path"
+          d="M10.0003 18.3334C14.6027 18.3334 18.3337 14.6024 18.3337 10C18.3337 5.39765 14.6027 1.66669 10.0003 1.66669C5.39795 1.66669 1.66699 5.39765 1.66699 10C1.66699 14.6024 5.39795 18.3334 10.0003 18.3334Z"
+          stroke={color}
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="1.67"
+        />
+      </g>
+      <defs className="defs">
+        <clipPath className="clip-path" id="clip0_1_3910">
+          <rect className="rect" fill="white" height="20" width="20" />
+        </clipPath>
+      </defs>
+    </StyledCircle>
+  );
+};
+
+Circle.propTypes = {
+  color: PropTypes.string
+};
